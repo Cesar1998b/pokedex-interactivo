@@ -20,3 +20,12 @@ a{
   font-size: 13px;
   color: #5e5e5e;
 }
+
+@media only screen and (max-width: 380px) {
+  .logo-pokedex{
+    width: 150px;
+  }
+  .dev{
+    font-size: 11px;
+  }
+}

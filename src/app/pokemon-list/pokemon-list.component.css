@@ -38,8 +38,9 @@
 }
 
 .pagination {
-  justify-content: end;
-  margin-right: 15px;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 35px;
 }
 
 ngb-pagination ::ng-deep a {
@@ -158,7 +159,7 @@ ngb-pagination ::ng-deep a {
     margin-right: 1325px;
   }
   .pagination{
-    margin-right: 22px;
+    margin-right: 44px;
   }
 }
 
@@ -218,6 +219,9 @@ ngb-pagination ::ng-deep a {
     font-size: 18px;
     text-transform: capitalize;
   }
+  .pagination{
+    margin-right: 60px;
+  }
 }
 
 @media only screen and (max-width: 780px) {
@@ -247,6 +251,10 @@ ngb-pagination ::ng-deep a {
   .pokemon-id{
     font-size: 13px;
   }
+  .pagination{
+    justify-content: center;
+    margin-right: 0px;
+  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -258,11 +266,16 @@ ngb-pagination ::ng-deep a {
     margin-left: 45px;
     margin-right: 519px;
   }
+  .pagination{
+    justify-content: center;
+    margin-right: 0px;
+  }
 }
 
 @media only screen and (max-width: 570px) {
   #search-nav {
     width: 357px !important;
+    font-size: 12px;
   }
   .social-media{
     margin-top: -4px;
@@ -305,6 +318,17 @@ ngb-pagination ::ng-deep a {
   .numFavs{
     margin-top: 7px;
     font-size: 12px;
+  }
+  .pagination{
+    justify-content: center;
+    margin-right: 0px;
+    font-size: 12px;
+  }
+  .firstIn[_ngcontent-uqd-c101] {
+    width: 35px !important;
+    margin-left: -2px !important;
+    padding-left: 13px !important;
+    height: 32px !important;
   }
 }
 
