@@ -1,0 +1,22 @@
+.logo {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.copy {
+  display: flex;
+  justify-content: center;
+  margin-top: -11px;
+  margin-right: -53px;
+}
+
+a{
+  color: transparent;
+  text-decoration: none;
+}
+
+.dev {
+  font-size: 13px;
+  color: #5e5e5e;
+}
