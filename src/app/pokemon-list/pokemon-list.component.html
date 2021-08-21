@@ -1,0 +1,68 @@
+<div class="favs">
+  <div class="social-media">
+    <a class="a_twitter" href="https://twitter.com/CesaarB98" target="_blank"><img class="twitter" src="../../assets/twitter.svg" alt="twitter_logo"></a>
+    <a class="a_github" href="https://github.com/Cesar1998b" target="_blank"><img class="github" src="../../assets/iconmonstr-github-1.svg" alt="github_logo"></a>
+  </div>
+  <span class="heart">{{ redHeart }}</span><span class="numFavs">{{ favoritePokemons.length }}</span>
+</div>
+
+<div class="row">
+  <div class="col">
+    <div class="form-group">
+      <input type="text" class="form-control" name="filterPost" placeholder="Search Pokemon..." [(ngModel)]="filterPokemon" id="search-nav">
+    </div>
+  </div>
+</div>
+
+<div class="pagination">
+  <ngb-pagination [collectionSize]="totalPokemons" [pageSize]="25" [(page)]="page" [maxSize]="7" [rotate]="true" (pageChange)="loadPage()">
+    <ng-template ngbPaginationPages let-page let-pages="pages">
+          <li class="ngb-custom-pages-item" *ngIf="pages.length > 0">
+              <div class="form-group d-flex flex-nowrap px-2">
+                <input #i
+                    type="text"
+                    inputmode="numeric"
+                    pattern="[0-9]*"
+                    class="form-control custom-pages-input firstIn"
+                    id="paginationInput"
+                    [value]="page"
+                    (keyup.enter)="selectPage(i.value)"
+                    (blur)="selectPage(i.value)"
+                    (input)="formatInput($any($event).target)"
+                    aria-labelledby="paginationInputLabel paginationDescription"
+                    style="width: 2.5rem"
+                    disabled
+                />
+                <span id="paginationDescription" class="col-form-label text-nowrap px-2">
+                    of {{totalPokemons/25 | number:'1.0-0'}}</span>
+              </div>
+          </li>
+      </ng-template>
+  </ngb-pagination>
+</div>
+
+<div class="pokemon-grid">
+  <div class="card" *ngFor="let pokemon of pokemons | search:filterPokemon">
+    <div class="img-container">
+      <img class="pokemon-img" [src]="pokemon.img" alt="Pokemon">
+    </div>
+    <div class="card-info">
+      <div class="card-top">
+        <h3>{{ pokemon.name }}</h3>
+        <div>
+          #{{ pokemon.id }}
+        </div>
+      </div>
+      <div class="card-bottom">
+        <div class="pokemon-type">
+          <div class="pokemon-type-text type type-{{pokemon.types[0].type.name}}">{{ pokemon.types[0].type.name }}</div>
+          <div *ngIf="pokemon.types[1] != undefined" class="pokemon-type-text2 type type-{{pokemon.types[1].type.name}}">{{  pokemon.types[1].type.name }}</div>
+        </div>
+        <button class="pokemon-btn" [ngClass]="{'pending': pokemon.status, 'done': !pokemon.status}"  (click)="favs(pokemon)" >
+          <div class="pokemon-fav">{{ pokemon.heart }}</div>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
