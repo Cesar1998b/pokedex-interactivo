@@ -283,7 +283,7 @@ ngb-pagination ::ng-deep a {
     margin-right: 225px;
   }
   .pokemon-img{
-    width: 38px;
+    width: 34px;
     margin-top: 15px;
     margin-left: -3px;
   }
@@ -300,10 +300,10 @@ ngb-pagination ::ng-deep a {
     font-size: 8px !important;
   }
   .pokemon-fav{
-    font-size: 8px;
+    font-size: 7px;
   }
   .pokemon-id{
-    font-size: 10px;
+    font-size: 6px;
   }
   .favs{
     margin-top: 16px;
@@ -324,11 +324,12 @@ ngb-pagination ::ng-deep a {
     margin-right: 0px;
     font-size: 12px;
   }
-  .firstIn[_ngcontent-uqd-c101] {
+  .firstIn{
     width: 35px !important;
+    margin-top: 1px !important;
     margin-left: -2px !important;
     padding-left: 13px !important;
-    height: 32px !important;
+    height: 30px !important;
   }
 }
 
