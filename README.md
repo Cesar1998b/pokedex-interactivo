@@ -1,27 +1,28 @@
-# PokedexInt
+# Angular-Pokedex
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.2.
+[Let's go](https://angular-pokedex-mu.vercel.app/)🔥
 
-## Development server
+This project is an application build with Angular inspired in Pokedex Challenge by [Codealo](https://codealo.dev/).Using the [PokéApi](https://pokeapi.co/), this app will list Pokémon, and display details for a given Pokémon, also have a search bar and a favorite button.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Getting Started
+### Clone and install
 
-## Code scaffolding
+```bash
+# Clone the repo.
+git clone https://github.com/Cesar1998b/pokedex-interactivo.git
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+# Change directory to repo.
+cd pokedex-interactivo 
 
-## Build
+# Use npm install the dependencies.
+npm install
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## Run the Application
+We have preconfigured the project with a simple development web server. The simplest way to start this server is:
 
-## Running unit tests
+```npm
+npm start
+```
+Now browse to [localhost:4200](localhost:4200) to view the webapp.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
