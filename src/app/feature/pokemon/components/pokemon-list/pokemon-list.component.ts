@@ -1,7 +1,5 @@
-import { PokemonService } from './../services/pokemon.services';
+import { PokemonService } from '../../shared/service/pokemon.services';
 import { Component, OnInit } from '@angular/core';
-import { PollingWatchKind } from 'typescript';
-import { areAllEquivalent } from '@angular/compiler/src/output/output_ast';
 
 @Component({
   selector: 'app-pokemon-list',
@@ -9,6 +7,7 @@ import { areAllEquivalent } from '@angular/compiler/src/output/output_ast';
   styleUrls: ['./pokemon-list.component.css'],
 })
 export class PokemonListComponent implements OnInit {
+
   pokemons: any[] = [];
   filterPokemon = '';
   page = 1;
@@ -28,6 +27,7 @@ export class PokemonListComponent implements OnInit {
   constructor(private pokemonservice: PokemonService) {}
 
   ngOnInit(): void {
+    console.log('hola');
     this.getPokemons('https://pokeapi.co/api/v2/pokemon?limit=25&offset=0');
     localStorage.clear();
   }
