@@ -27,7 +27,6 @@ export class PokemonListComponent implements OnInit {
   constructor(private pokemonservice: PokemonService) {}
 
   ngOnInit(): void {
-    console.log('hola');
     this.getPokemons('https://pokeapi.co/api/v2/pokemon?limit=25&offset=0');
     localStorage.clear();
   }
@@ -64,7 +63,7 @@ export class PokemonListComponent implements OnInit {
                   }
                 }
               }
-              this.pokemons.sort();
+              this.pokemonservice.sortPokemons(this.pokemons);
             }
             this.ready = true;
           });
